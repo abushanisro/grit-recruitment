@@ -1,0 +1,4 @@
+apps/backend/Dockerfile
+apps/backend/node_modules
+apps/backend/migrations
+apps/backend/dist

@@ -1,0 +1,21 @@
+.customMenu,
+.menuBar {
+  background-color: transparent;
+}
+
+.customMenu:hover,
+.menuBar:focus-within {
+  color: var(--mantine-color-primaryDarkBlue-9) !important;
+  background-color: var(--mantine-color-primarySkyBlue-6);
+}
+
+.menuBar:hover,
+.menuBar:focus-within {
+  background-color: var(--mantine-color-primarySkyBlue-6) !important;
+  color: black !important;
+}
+
+.cardButton:hover,
+.cardButton:focus-within {
+  background-color: var(--mantine-color-secondaryGreen-0) !important;
+}

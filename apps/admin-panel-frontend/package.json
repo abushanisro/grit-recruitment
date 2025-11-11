@@ -1,0 +1,52 @@
+{
+  "name": "admin-panel-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env ENV=dev next dev --port=3002",
+    "lint": "cross-env ENV=dev next lint",
+    "stage:build": "rm -rf out && cross-env ENV=stage  next build",
+    "stage:start": "cross-env ENV=stage next start",
+    "prod:build": "rm -rf out &&  cross-env ENV=prod next build",
+    "prod:start": "cross-env ENV=prod next start",
+    "stage:deploy": "pnpm run stage:build && aws s3 sync out s3://jobverse-sales-admin-stage && aws cloudfront create-invalidation --distribution-id E1O2ULTJJ2NFN3 --paths '/*'",
+    "prod:deploy": "pnpm run prod:build  && aws s3 sync out s3://jobverse-sales-admin-prod && aws cloudfront create-invalidation --distribution-id EL69677QFJ9M0 --paths '/*'"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.1.5",
+    "@mantine/dates": "^7.2.2",
+    "@mantine/hooks": "^7.1.5",
+    "@mantine/modals": "^7.1.5",
+    "@mantine/notifications": "^7.1.5",
+    "@tabler/icons-react": "^2.39.0",
+    "@tanstack/react-query": "^4.36.1",
+    "@ts-rest/core": "^3.30.4",
+    "@ts-rest/react-query": "^3.30.4",
+    "contract": "workspace:1.0.0",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.10",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "next": "13.5.4",
+    "pino": "^8.17.2",
+    "pino-transmit-http": "^1.0.1",
+    "posthog-js": "^1.96.1",
+    "react": "^18",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18",
+    "react-hook-form": "^7.47.0",
+    "react-select": "^5.7.7",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.5",
+    "@types/lodash": "^4.14.200",
+    "@types/multer": "^1.4.8",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "typescript": "^5.2.2"
+  }
+}

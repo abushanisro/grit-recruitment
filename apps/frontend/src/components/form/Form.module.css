@@ -1,0 +1,16 @@
+/* Select fields css */
+.selectInput::placeholder {
+  color: black;
+}
+
+.input::placeholder {
+  color: var(--mantine-color-customGray-4);
+  font-size: 14px !important;
+}
+
+
+.numberInput input[type="text"]:hover{
+  border:1px solid var(--mantine-color-white) !important;
+  border-radius:30px;
+  
+}

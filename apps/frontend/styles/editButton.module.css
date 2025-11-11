@@ -1,0 +1,29 @@
+.editButton:hover {
+  background-color: var(--mantine-color-secondarySkyBlue-3) !important;
+  color: black !important;
+}
+
+.tableHeader:hover {
+  color: var(--mantine-color-primarySkyBlue-8) !important;
+}
+
+.DownloadButton:hover {
+  background-color: var(--mantine-color-primarySkyBlue-8) !important
+      ;
+  color: black !important;
+}
+.GoButton:hover {
+  background-color: var(--mantine-color-primarySkyBlue-8) !important;
+}
+
+.datePickerPlaceholder button span {
+  color: black;
+}
+
+.customBoostCards:hover {
+  background-color: "#1A1A1A" !important;
+}
+
+.customCards:hover {
+  background-color: #1a1a1a !important;
+}

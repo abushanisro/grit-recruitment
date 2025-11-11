@@ -1,0 +1,11 @@
+button.customControl {
+  background-color:transparent;
+  color: var(--mantine-color-primarySkyBlue-6);
+  border: 1px solid var(--mantine-color-primarySkyBlue-6) ;
+
+  
+}
+button.customControl[data-active="true"] {
+  background-color: var(--mantine-color-primarySkyBlue-6);
+  color: black;
+}

@@ -1,0 +1,9 @@
+.customMenu,
+.menuBar {
+  background-color: var(--mantine-color-customBlack-4);
+}
+
+.customMenu:hover {
+  color: var(--mantine-color-customBlack-4) !important;
+  background-color: var(--mantine-color-secondaryYellow-3);
+}

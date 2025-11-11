@@ -1,0 +1,17 @@
+{
+  "name": "contract",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@mantine/tiptap": "^7.5.2",
+    "@tiptap/extension-character-count": "^2.2.2",
+    "@tiptap/extension-highlight": "^2.2.2",
+    "@tiptap/extension-subscript": "^2.2.2",
+    "@tiptap/extension-superscript": "^2.2.2",
+    "@tiptap/extension-text-align": "^2.2.2",
+    "@tiptap/extension-underline": "^2.2.2",
+    "@tiptap/starter-kit": "^2.2.2",
+    "@ts-rest/core": "^3.30.4",
+    "zod": "^3.22.4"
+  }
+}

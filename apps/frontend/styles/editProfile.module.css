@@ -1,0 +1,8 @@
+.editProfile:hover {
+    background-color: var(--mantine-color-secondaryGreen-1) !important;
+    color:black !important
+}
+
+.actionIcon:hover{
+    background-color:var(--mantine-color-primarySkyBlue-7) !important;
+}

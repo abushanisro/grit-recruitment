@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.json", // Extend the config options from the root
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "incremental": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+    "allowUnreachableCode": false,
+    "paths": {
+      "contract": ["../../apps/contract"],
+      "contract/*": ["../../apps/contract/*"]
+    },
+    "jsx": "react"
+  }
+}

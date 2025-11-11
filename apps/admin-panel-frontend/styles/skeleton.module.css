@@ -1,0 +1,13 @@
+.customSkeleton::after {
+  background-color: var(--mantine-color-customGray-9) !important;
+}
+.customSkeleton::before {
+  background-color: var(--mantine-color-customBlack-1) !important;
+}
+
+.lightCustomSkeleton::after {
+  background-color: var(--mantine-color-customGray-5) !important;
+}
+.lightCustomSkeleton::before {
+  background-color: var(--mantine-color-customGray-7) !important;
+}

@@ -1,0 +1,8 @@
+.profileFile:hover {
+    background-color: var(--mantine-color-secondarySkyBlue-5) !important;
+}
+
+.actionIcon:hover {
+    background-color: var(--mantine-color-primaryPaleBlue-9) !important;
+    border-radius:50%;
+}

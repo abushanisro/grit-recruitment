@@ -1,0 +1,11 @@
+.primaryGreen:hover {
+  background-color: var(--mantine-color-primaryGreen-4) !important;
+}
+
+.secondaryGreen:hover {
+  background-color: var(--mantine-color-secondaryGreen-2) !important;
+}
+
+.primarySkyBlue:hover {
+  background-color: var(--mantine-color-primarySkyBlue-7) !important;
+}

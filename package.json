@@ -1,0 +1,29 @@
+{
+  "name": "jobverse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "backend:stage:deploy": "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 217454337502.dkr.ecr.ap-south-1.amazonaws.com && docker build --platform linux/amd64  -t sales-jobverse-backend-stage . -f apps/backend/Dockerfile &&  docker tag sales-jobverse-backend-stage:latest 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-backend-stage:latest && docker push 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-backend-stage:latest && kubectl apply -f apps/backend/stage-config.yml -n sales-jobverse-stage && kubectl rollout restart deployment sales-jobverse-stage-backend -n sales-jobverse-stage",
+    "backend:prod:deploy": "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 217454337502.dkr.ecr.ap-south-1.amazonaws.com && docker build --platform linux/amd64 -t sales-jobverse-backend-prod . && docker tag sales-jobverse-backend-prod:latest 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-backend-prod:latest && docker push 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-backend-prod:latest && kubectl apply -f apps/backend/prod-config.yml -n sales-jobverse-prod && kubectl rollout restart deployment sales-jobverse-prod-backend -n sales-jobverse-prod",
+    "frontend:prod:deploy": "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 217454337502.dkr.ecr.ap-south-1.amazonaws.com && docker build --platform linux/amd64 -t sales-jobverse-frontend-prod . -f apps/frontend/Dockerfile && docker tag sales-jobverse-frontend-prod:latest 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-frontend-prod:latest && docker push 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-frontend-prod:latest && kubectl apply -f apps/frontend/prod-config.yml -n sales-jobverse-prod && kubectl rollout restart deployment sales-jobverse-frontend -n sales-jobverse-prod",
+    "frontend:stage:deploy": "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 217454337502.dkr.ecr.ap-south-1.amazonaws.com && docker build --platform linux/amd64 -t sales-jobverse-frontend-stage . -f apps/frontend/Dockerfile.stage && docker tag sales-jobverse-frontend-stage:latest 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-frontend-stage:latest && docker push 217454337502.dkr.ecr.ap-south-1.amazonaws.com/sales-jobverse-frontend-stage:latest && kubectl apply -f apps/frontend/stage-config.yml -n sales-jobverse-stage && kubectl rollout restart deployment sales-jobverse-frontend-stage -n sales-jobverse-stage"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "6.2.9",
+    "@mikro-orm/core": "6.2.9",
+    "@mikro-orm/migrations": "6.2.9",
+    "@mikro-orm/postgresql": "6.2.9",
+    "@mikro-orm/reflection": "6.2.9",
+    "@nestjs/common": "^10.2.7",
+    "@nestjs/core": "^10.2.7",
+    "@nestjs/mapped-types": "^2.0.2",
+    "@ts-rest/core": "^3.30.4",
+    "@ts-rest/nest": "^3.30.4",
+    "lodash": "^4.17.21",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.200"
+  }
+}

@@ -1,0 +1,3 @@
+.applyButton:hover {
+    background-color: var(--mantine-color-primarySkyBlue-7) !important;
+}

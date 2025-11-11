@@ -1,0 +1,4 @@
+.faq:hover {
+  color: var(--mantine-color-secondaryDarkBlue-9) !important;
+  background-color: var(--mantine-color-primaryGreen-3) !important;
+}
